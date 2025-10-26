@@ -1,0 +1,55 @@
+program: run.py
+name: texas_sweep
+method: random
+metric:
+  name: val_acc
+  goal: maximize
+parameters:
+  dataset:
+    distribution: constant
+    value: "texas"
+  weight_decay:
+    distribution: log_uniform_values
+    min: 0.007
+    max: 0.2
+  complex_weight_decay:
+    distribution: log_uniform_values
+    min: 0.01
+    max: 0.4
+  layers:
+    distribution: categorical
+    values: [4, 5, 6,7,8]
+  hidden_channels:
+    distribution: categorical
+    values: [8,16,32]
+  input_dropout:
+    distribution: categorical
+    values: [0.0,0.1,0.2,0.3, 0.4, 0.5,0.6,0.7,0.8,0.9]
+  dropout:
+    distribution: categorical
+    values: [0.0,0.1,0.2,0.3, 0.4, 0.5,0.6,0.7,0.8,0.9]
+  lr:
+    value: 0.02
+  epochs:
+    distribution: constant
+    value: 1500
+  early_stopping:
+    distribution: constant
+    value: 1000
+  folds:
+    distribution: constant
+    value: 10
+command:
+  - ${env}
+  - python
+  - ${program}
+  - ${args}
+  - --left_weights=True
+  - --right_weights=True
+  - --use_act=True
+  - --entity=wandb-entity-name
+  - --complex_weights_act=tanh
+  - --cuda=0
+  - --batch_norm=True
+
+  
