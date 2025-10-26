@@ -1,6 +1,5 @@
 # Complex-Weighted Convolutional Networks: Provable Expressiveness via Complex Diffusion
-This repository contains the official code for the paper Complex-Weighted Convolutional Networks: Provable Expressiveness via Complex Diffusion (The Fourth Learning on Graphs Conference 2025).
-
+This repository contains the official code for the paper [**Complex-Weighted Convolutional Networks: Provable Expressiveness via Complex Diffusion**](https://openreview.net/forum?id=EgRvGMd2Zp#discussion) (The Fourth Learning on Graphs Conference 2025).
 ## Requirements
 
 This project requires Python 3.12.9 and torch 2.5.1 and uses `conda` for environment management.
@@ -76,3 +75,14 @@ wandb sweep example:
 ```bash
 wandb sweep --project project-name sweep_example.yml
 ```
+## Citation
+
+For attribution in academic contexts, please cite the following paper:
+```bibtex
+@inproceedings{complexconv2025,
+  title={Complex-Weighted Convolutional Networks: Provable Expressiveness via Complex Diffusion},
+  author={Cristina López Amado, Tassilo Schwarz, Yu Tian, Renaud Lambiotte},
+  booktitle={Proceedings of the Fourth Learning on Graphs Conference (LoG)},
+  year={2025},
+  url={https://openreview.net/forum?id=EgRvGMd2Zp}
+}
