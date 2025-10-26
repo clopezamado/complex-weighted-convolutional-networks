@@ -1,4 +1,5 @@
-# Diffusion on Complex-Weighted Graphs: an application to Graph Neural Networks
+# Complex-Weighted Convolutional Networks: Provable Expressiveness via Complex Diffusion
+This repository contains the official code for the paper Complex-Weighted Convolutional Networks: Provable Expressiveness via Complex Diffusion (The Fourth Learning on Graphs Conference 2025).
 
 ## Requirements
 
