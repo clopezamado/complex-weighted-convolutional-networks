@@ -27,6 +27,9 @@ pip install torch_geometric==2.6.1
 pip install wandb==0.19.8
 pip install torch_scatter==2.1.2
 ```
+## Datasets
+The WebKB (texas, wisconsin, cornell) and film datasets are downloaded on the fly. The WikipediaNetwork datasets with the Geom-GCN pre-processing can be downloaded from the Geom-GCN repo. The files for the Planetoid datasets can also be found in the Geom-GCN repo. The downloaded files must be placed into datasets/<DATASET_NAME>/raw/.
+
 ## Hyperparameters
 To run a training, the following hyperparameters can be configured:
 
